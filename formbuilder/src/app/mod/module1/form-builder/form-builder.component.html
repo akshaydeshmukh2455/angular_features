@@ -1,0 +1,27 @@
+<p>form-builder works!</p>
+
+<!-- <form [formGroup]="loginForm" (ngSubmit)="submitCall()">
+    USERNAME:<input type="text" formControlName="username"><br>
+    PASSWORD:<input type="text" formControlName="password"><br>
+    <input type="submit" value="SUBMIT">
+</form> -->
+
+<!-- validator in formbuilder -->
+
+<form [formGroup]="loginForm" (ngSubmit)="submitCall()">
+    USERNAME:<input type="text" formControlName="username"><br>
+    <div *ngIf="loginForm.controls['username'].touched && 
+    loginForm.controls['username'].invalid">
+    <span *ngIf="loginForm.controls['username'].hasError('required')" style="color: 
+   red">Username is Required</span>
+    </div><br>
+    PASSWORD:<input type="text" formControlName="password"><br>
+    <div *ngIf="loginForm.controls['password'].touched && 
+    loginForm.controls['password'].invalid">
+    <span *ngIf="loginForm.controls['password'].hasError('required')" style="color: 
+   red">Password is Required</span>
+    </div><br>
+    <button type="submit" [disabled]="!loginForm.valid">Submit</button>
+    <button (click)="fillValue()">Fill Form</button>
+    <button (click)="resetValue()">RESET</button>
+</form>

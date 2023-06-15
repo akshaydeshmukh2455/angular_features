@@ -1,0 +1,76 @@
+
+   
+   <form [formGroup]="registrationForm" (ngSubmit)="addEmployee(common.e)">
+    <div class="container">
+      
+      <h1 style="text-align: center; color:slateblue;">Register Here</h1>
+      <p style="color: red; font-size:larger;">Please fill in this form to create an account.</p>
+      <hr>
+      
+      <label for="ename" style="color: darkviolet;"><b>Employee Name</b></label>
+      <input type="text" placeholder="Enter Employee Name" formControlName="ename" [(ngModel)]="common.e.ename" required>
+      <div *ngIf="registrationForm.controls['ename'].touched && 
+      registrationForm.controls['ename'].invalid">
+      <span *ngIf="registrationForm.controls['ename'].hasError('required')" style="color: 
+       red">Employee Name is Required</span>
+      </div><br>
+
+      <label for="email" style="color: darkviolet;"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" formControlName="email" [(ngModel)]="common.e.email" required>
+      <!-- <small *ngIf="registrationForm.get('email').invalid && registrationForm.get('email').touched" style="color: 
+      red">Enter valid email id</small><br> -->
+      <!-- <div *ngIf="registrationForm.controls['email'].touched && 
+      registrationForm.controls['email'].invalid"> 
+      <span *ngIf="registrationForm.controls['email'].hasError('required')" style="color: 
+       red">Email ID is Required</span>
+       <span *ngIf="registrationForm.controls['email'].hasError('pattern')" style="color: 
+       red">Email Valid Email Id</span>
+      </div><br> -->
+
+      <label for="mobile" style="color: darkviolet;"><b>Mobile Number</b></label>
+      <input type="text" placeholder="Enter Employee Mobile Number" formControlName="mobile" [(ngModel)]="common.e.mobile" required>
+      <div *ngIf="registrationForm.controls['mobile'].touched && 
+      registrationForm.controls['mobile'].invalid">
+      <span *ngIf="registrationForm.controls['mobile'].hasError('required')" style="color: 
+       red">Mobile Number is Required</span>
+      </div><br>
+
+      <label for="designation" style="color: darkviolet;"><b>Designation</b></label>
+      <input type="text" placeholder="Enter Employee Designation" formControlName="designation" [(ngModel)]="common.e.designation" required>
+      <div *ngIf="registrationForm.controls['designation'].touched && 
+      registrationForm.controls['designation'].invalid">
+      <span *ngIf="registrationForm.controls['designation'].hasError('required')" style="color: 
+       red">Designation is Required</span>
+      </div><br>
+
+      <label for="username" style="color: darkviolet;"><b>Username</b></label>
+      <input type="text" placeholder="Enter Employee Username" formControlName="username" [(ngModel)]="common.e.username" required>
+      <div *ngIf="registrationForm.controls['username'].touched && 
+      registrationForm.controls['username'].invalid">
+      <span *ngIf="registrationForm.controls['username'].hasError('required')" style="color: 
+       red">Username is Required</span>
+      </div><br>
+
+      <label for="password" style="color: darkviolet;"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" formControlName="password" [(ngModel)]="common.e.password" required>
+      <div *ngIf="registrationForm.controls['password'].touched && 
+      registrationForm.controls['password'].invalid">
+      <span *ngIf="registrationForm.controls['password'].hasError('required')" style="color: 
+       red">Password is Required</span>
+      </div><br>
+<!--   
+      <label for="password_repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" formControlName="password_repeat" [(ngModel)]="common.emp.repeat_password" required> -->
+      <hr>
+  
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+      <button type="submit" class="registerbtn">Register</button>
+    </div>
+  
+    <div class="container signin">
+      <p >Already have an account? <a href="#">Sign in</a>.</p>
+    </div>
+    
+  </form>
+  
+   

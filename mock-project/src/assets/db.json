@@ -1,0 +1,31 @@
+{
+  "Employee": [
+    {
+      "id": 1,
+      "ename": "piyu@123",
+      "email": "piyu@123",
+      "mobile": "9604191240",
+      "designation": "SE",
+      "username": "piyu@123",
+      "password": "piyu@123"
+    },
+    {
+      "id": 2,
+      "ename": "pratik",
+      "email": "pratik@123",
+      "mobile": "55555",
+      "designation": "SE",
+      "username": "cc",
+      "password": "cc"
+    },
+    {
+      "id": 6,
+      "ename": "akshay",
+      "email": "akshyay@123",
+      "mobile": "9604191240",
+      "designation": "SE",
+      "username": "abc@123",
+      "password": "abc@123"
+    }
+  ]
+}

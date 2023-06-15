@@ -1,0 +1,18 @@
+<!-- <p>new-com works!</p> -->
+<form [formGroup]="UserInfo" (ngSubmit)="submit()">
+    Firstname:<input type="text" formControlName="firstName"><br>
+    Middlename:<input type="text" formControlName="middleName"><br>
+    Lastname:<input type="text" formControlName="lastName"><br>
+    Mobile:<input type="number" formControlName="mobile"><br>
+    Email:<input type="text" formControlName="email"><br>
+    Password:<input type="text" formControlName="password"><br>
+    <div formGroupName="address">
+    FlatNo:<input type="number" formControlName="flatNo"><br>
+    LaneNo:<input type="number" formControlName="laneNo"><br>
+    Landmark:<input type="text" formControlName="landmark"><br>
+    Areaname:<input type="text" formControlName="areaname"><br>
+    City:<input type="text" formControlName="city"><br>
+    Pincode:<input type="number" formControlName="pincode"><br>
+    <input type="submit" value="SUBMIT">
+</div>
+</form>

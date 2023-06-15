@@ -1,0 +1,44 @@
+<!-- <p>login works!</p> -->
+<!-- <form (ngSubmit)="callBack()">
+    username<input type="text" ><br>
+    password<input type="text"><br>
+    <input type="submit" value="Login">
+</form> -->
+<h1 style="color:red; text-align: center;" >User Login</h1>
+<div class="row" >
+  <div class="col-md-8">
+<form [formGroup]="loginForm" (ngSubmit)="callBack()">
+    <div class="container">
+      <label for="uname" style="color:darkviolet;"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" formControlName="username" required>
+      <div *ngIf="loginForm.controls['username'].touched && 
+    loginForm.controls['username'].invalid">
+    <span *ngIf="loginForm.controls['username'].hasError('required')" style="color: 
+   red">Username is Required</span>
+    </div><br>
+      
+    
+      <label for="psw" style="color:darkviolet"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" formControlName="password" required>
+      <div *ngIf="loginForm.controls['password'].touched && 
+      loginForm.controls['password'].invalid">
+      <span *ngIf="loginForm.controls['password'].hasError('required')" style="color: 
+     red">Password is Required</span>
+      </div><br>
+      
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+  
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn" (click)="resetValue()">Cancel</button>
+      <span class="psw" style="color:red">New Registration: <a routerLink="register" style="color:darkblue;">Register Here?</a></span>
+    </div>
+    <!-- <button (click)="resetValue()">RESET</button> -->
+  </form>
+  </div>
+</div>
+<router-outlet></router-outlet>
+<!-- <button (click)="callBack()">login</button> -->

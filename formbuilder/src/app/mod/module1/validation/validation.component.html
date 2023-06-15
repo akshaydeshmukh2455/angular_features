@@ -1,0 +1,54 @@
+<p>validation works!</p>
+
+<form [formGroup]="registrationForm" (ngSubmit)="submitCall()">
+    FirstName: <input type="text" formControlName="fname">
+    <div *ngIf="registrationForm.controls['fname'].touched && 
+    registrationForm.controls['fname'].invalid">
+    <span *ngIf="registrationForm.controls['fname'].hasError('required')" style="color: 
+   red">First Name is Required</span>
+    <span *ngIf="registrationForm.controls['fname'].hasError('minlength')" style="color: 
+   red">minimum 5 characters required</span>
+    <span *ngIf="registrationForm.controls['fname'].hasError('maxlength')" style="color: 
+   red">maximum 10 characters required</span>
+    </div><br>
+    LastName: <input type="text" formControlName="lname"><br>
+    <div *ngIf="registrationForm.controls['lname'].touched && 
+    registrationForm.controls['lname'].invalid">
+    <span *ngIf="registrationForm.controls['lname'].hasError('required')" style="color: 
+   red">Last Name is Required</span>
+    <span *ngIf="registrationForm.controls['lname'].hasError('minlength')" style="color: 
+   red">minimum 5 characters required</span>
+    <span *ngIf="registrationForm.controls['lname'].hasError('maxlength')" style="color: 
+   red">maximum 10 characters required</span>
+    </div><br>
+    Email: <input type="text" formControlName="email"><br>
+    <div *ngIf="registrationForm.controls['email'].touched && 
+    registrationForm.controls['email'].invalid">
+    <span *ngIf="registrationForm.controls['email'].hasError('email')" style="color: 
+   red">Email is Required</span>
+    </div>
+    Password: <input type="text" formControlName="password"><br>
+    <div *ngIf="registrationForm.controls['password'].touched && 
+    registrationForm.controls['password'].invalid">
+    <span *ngIf="registrationForm.controls['password'].hasError('required')" style="color: 
+   red">Password is Required</span>
+    </div>    <div formGroupName="address">
+    cityName: <input type="text" formControlName="city"><br>
+    <div *ngIf="registrationForm.controls['address'].get('city').touched && 
+    registrationForm.controls['address'].get('city').invalid">
+    <span 
+   *ngIf="registrationForm.controls['address'].get('city')!.hasError('required')" 
+   style="color: red">City Name is Required</span>
+    </div>
+    AreaName: <input type="text" formControlName="area"><br>
+    <div *ngIf="registrationForm.controls['address'].get('area').touched && 
+    registrationForm.controls['address'].get('area').invalid">
+    <span 
+   *ngIf="registrationForm.controls['address'].get('area')!.hasError('required')" 
+   style="color: red">Area Name is Required</span>
+    </div>
+    </div>
+    <button type="submit" >SUBMIT</button>
+    <button (click)="fillForm()">FillForm</button>
+    <button (click)="resetData()">RESET</button>
+   </form>

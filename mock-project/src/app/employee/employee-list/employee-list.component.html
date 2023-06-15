@@ -1,0 +1,40 @@
+<!-- <p>employee-list works!</p> -->
+<hr>
+<div class="col-md-6 mb-4">
+  <h1 style="color: darkviolet;text-align: center;">Employee Database</h1>
+<div class="container">
+    <table class="table table-striped">
+      <tbody >
+          <th>ID</th>
+          <th>ENAME</th>
+          <th>EMAIL</th>
+          <th>MOBILE</th>
+          <th>DESIGNATION</th>
+          <th>USERNAME</th>
+          <th>PASSWORD</th>
+          <th>ACTION</th>
+          
+        <tr *ngFor="let e of empList">
+          <td>{{e.id}}</td>
+          <td>{{e.ename}}</td>
+          <td>{{e.email}}</td>
+          <td>{{e.mobile}}</td>
+          <td>{{e.designation}}</td>
+          <td>{{e.username}}</td>
+          <td>{{e.password}}</td>
+          <td><a [routerLink]="['employeedetail',e.id]">Show Details</a></td>
+
+          <td><a class="btn" [routerLink]="['update']" [state]="e">
+            <i class="fa fa-edit"></i>
+          </a>
+          </td>
+          <td><a class="btn" (click)="deleteData(e.id)">
+            <i class="fa fa-trash"></i>
+          </a>
+          </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,10 @@
+<p>nested-form-builder works!</p>
+<form [formGroup]="loginForm" (ngSubmit)="submitCall()">
+    USERNAME:<input type="text" formControlName="username"><br>
+    PASSWORD:<input type="text" formControlName="password"><br>
+    <div formGroupName="address">
+        CITY:<input type="text" formControlName="city"><br>
+        AREA:<input type="text" formControlName="area"><br>
+    </div>
+    <input type="submit" value="SUBMIT">
+</form>

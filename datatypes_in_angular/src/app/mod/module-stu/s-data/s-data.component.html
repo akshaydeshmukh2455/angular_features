@@ -1,0 +1,45 @@
+<p>s-data works!</p>
+<!-- Example of String interpolation -->
+<!-- {{a}}<br>
+{{b}}<br>
+{{name}}<br>
+{{nameChar}}<br>
+{{flag}}<br>
+{{numArray}}<br>
+
+
+<div *ngFor="let a of numArray">
+{{a}}
+</div>
+
+{{stu.rollno}}<br>
+{{stu.name}}<br>
+{{stu1.name}}
+
+<div *ngFor="let s of stuList">
+{{s.rollno}}<br>
+{{s.name}}<br>
+{{s.addr.city}}<br>
+{{s.addr.area}}
+</div>
+
+{{a+b}}<br>
+{{getString()}}<br>
+{{getSum()}}<br>
+{{m1()}}<br>
+{{m2().rollno}}<br>
+{{m2().name}}<br>
+
+{{x}} -->
+
+<!-- Property Binding -->
+USERNAME:<input type="text" [value]="name">
+<button [disabled]="flag" >SUBMIT</button>
+<!-- Event Binding -->
+
+<!-- <button (click)="getMethod()">Click</button> -->
+
+<h1 (mouseover)="mouseOverEvent()" (mouseout)="mouseOutEvent()">{{a}}</h1>
+
+CITY:<input type="text" [(ngModel)]="city"><br>
+{{city}}

@@ -1,0 +1,41 @@
+<p>reg-component works!</p>
+<!-- <div>
+NAME:<input type="text" [(ngModel)]="name"><br>
+LASTNAME:<input type="text" [(ngModel)]="lastname"><br>
+EMAIL:<input type="text" [(ngModel)]="email"><br>
+PASSWORD:<input type="text" [(ngModel)]="password"><br>
+CITY:<input type="text" [(ngModel)]="city"><br>
+AREA:<input type="text" [(ngModel)]="area"><br>
+<button (click)="register()">Register</button>
+</div> -->
+
+<div>
+    
+    NAME:<input type="text" [(ngModel)]="us.name"><br>
+    LASTNAME:<input type="text" [(ngModel)]="us.lastname"><br>
+    EMAIL:<input type="text" [(ngModel)]="us.email"><br>
+    PASSWORD:<input type="text" [(ngModel)]="us.password"><br>
+    CITY:<input type="text" [(ngModel)]="us.city"><br>
+    AREA:<input type="text" [(ngModel)]="us.area"><br>
+    <button (click)="register()">Register</button>
+    </div>
+    {{us.name}}<br>
+    {{us.lastname}}<br>
+    {{us.email}}<br>
+    {{us.password}}<br>
+    {{us.city}}<br>
+    {{us.area}}<br>
+
+    NUM1:<input type="number" [(ngModel)]="a"><br>
+    NUM2:<input type="number" [(ngModel)]="b"><br>
+    
+    <button (click)="add()">Add</button>
+    <button (click)="sub()">Sub</button>
+    <button (click)="multi()">Multi</button>
+    <button (click)="div()">Div</button><br><br>
+
+    Total:{{c}}<br><br>
+
+    <button [disabled]="flag" >JAVA</button>
+    <button (click)="getMethod()">Click</button>
+    <h1 (mouseover)="mouseOverEvent()">{{j}}</h1>

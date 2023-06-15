@@ -1,0 +1,7 @@
+<!-- <p>reactive-form works!</p> -->
+
+<form [formGroup]="loginForm" (ngSubmit)="callBack()">
+    USERNAME:<input type="text" formControlName="username"><br>
+    PASSWORD:<input type="text" formControlName="password"><br>
+    <input type="submit" value="SUBMIT">
+</form>

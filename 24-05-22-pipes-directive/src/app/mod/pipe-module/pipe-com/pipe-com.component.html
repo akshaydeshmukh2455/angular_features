@@ -1,0 +1,19 @@
+<p>pipe-com works!</p>
+<h1>Pipes Example</h1>
+{{name}}<br>
+{{name | uppercase}}<br>
+{{name | lowercase}}<br>
+{{todayDate}}<br>
+{{todayDate | date:"dd/mm/yyyy"}}<br>
+{{todayDate | date:"shortTime"}}<br>
+{{todayDate | date:"longTime"}}<br>
+{{100 | currency:"USD"}}<br>
+{{100 | currency:"INR"}}<br>
+{{0.83 | percent}}<br>
+{{weeks | slice:2:3}}<br>
+<input type="text" [(ngModel)]="num"><br>
+{{num | greater}}<br><br>
+<input type="text" [(ngModel)]="prime"><br>
+{{prime | primeNumber}}<br><br>
+<input type="text" [(ngModel)]="nm"><br>
+{{nm | mobilenumber}}<br><br>
